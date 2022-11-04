@@ -12,9 +12,9 @@
 
     <!-- Checks that no tab characters in the source code. -->
     <!-- Reports only first instance. -->
-    <module name="FileTabCharacter">
-        <property name="eachLine" value="false"/>
-    </module>
+<!--    <module name="FileTabCharacter">-->
+<!--        <property name="eachLine" value="false"/>-->
+<!--    </module>-->
 
 
     <!-- Checks that no file is more than 1500 lines long. -->
@@ -68,9 +68,9 @@
         <!-- http://checkstyle.sourceforge.net/config_design.html                        -->
         <!-- =========================================================================== -->
         <!-- SPECIAL HACK FOR NON-STATIC PUBIC FINAL VARIABLE -->
-<!--        <module name="VisibilityModifier">-->
-<!--            <property name="publicMemberPattern" value="^SLOPE_ORDER$"/>-->
-<!--        </module>-->
+        <module name="VisibilityModifier">
+            <property name="publicMemberPattern" value="^SLOPE_ORDER$"/>
+        </module>
         <!-- <module name="FinalClass"/> -->
         <module name="InterfaceIsType"/>
         <module name="MutableException"/>
@@ -149,10 +149,10 @@
         <!-- Imports                                                                     -->
         <!-- http://checkstyle.sourceforge.net/config_imports.html                       -->
         <!-- =========================================================================== -->
-        <module name="AvoidStarImport"/>
-        <module name="AvoidStaticImport"/>
+<!--        <module name="AvoidStarImport"/>-->
+<!--        <module name="AvoidStaticImport"/>-->
 
-    >
+       
 
 
         <!-- =========================================================================== -->
@@ -199,8 +199,12 @@
         <module name="LocalFinalVariableName">
             <property name="format" value="^[A-Z][A-Z_]*$"/>
         </module>
-
-
+        <module name="LocalVariableName">
+            <property name="format" value="^[a-z][a-zA-Z]*$"/>
+        </module>
+        <module name="MemberName">
+            <property name="format" value="^[a-z][a-zA-Z]*$"/>
+        </module>
 
         <module name="MethodName">
             <property name="format" value="^[a-z][a-zA-Z]*$"/>
@@ -210,9 +214,9 @@
             <property name="format" value="^[a-z]+(\.[a-z][a-z]*)*$"/>
         </module>
         <module name="PackageName"/>
-<!--        <module name="ParameterName">-->
-<!--            <property name="format" value="^[a-z][a-zA-Z]*$"/>-->
-<!--        </module>-->
+        <module name="ParameterName">
+            <property name="format" value="^[a-z][a-zA-Z]*$"/>
+        </module>
         <module name="StaticVariableName">
             <property name="format" value="^[a-z][a-zA-Z]*$|^[A-Z][A-Z_]*$"/>
         </module>
